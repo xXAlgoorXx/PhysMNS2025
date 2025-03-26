@@ -1,0 +1,43 @@
+\section{Quantum Mechanics}
+\begin{equation}
+    p = m \cdot v
+\end{equation}
+\subsection{Schrödinger equation}
+The time-independent Schrödinger equation:
+\begin{equation}
+    \label{eq:time-independent-schroedinger}
+\left(-\frac{\hbar^2}{2m} \frac{d^2}{dx^2} + V(x)\right) \psi(x) = E \psi(x),
+\end{equation}
+
+\(\psi(x)\) is a probabilty amplitude which doesnt say much itself. Only \(|\psi(x)|^2\) which is a probabilty density.
+\cref{eq:time-independent-schroedinger} can be transformed to 
+\begin{equation}
+    \frac{d^2}{dx^2} \psi(x) - b^2 \cdot \psi(x) = 0
+\end{equation}
+which can be solved by
+\begin{equation}
+    \psi(x) = A_1 \cdot e^{b \cdot x} + A_2 \cdot e^{-b \cdot x}
+\end{equation}
+\begin{equation}
+    b = \sqrt{\frac{2m}{\hbar^2}\cdot (V-E)}
+\end{equation}
+If \(V > E\), then \(b\) is imaginary and the solution is
+\begin{equation}
+    \psi(x) = A_1 \cdot \sin(k \cdot x - \varphi)
+\end{equation}
+with
+\begin{equation}
+    k =\frac{2\pi}{\lambda} =  \sqrt{\frac{2m}{\hbar^2}\cdot (E-V)}.
+\end{equation}
+Else if \(V < E\), then \(b\) is real and the solution is
+\begin{equation}
+    \psi(x) = A_2 \cdot e^{-b \cdot x}
+\end{equation}
+which is a real exponential decay.
+
+Heisenberg's uncertainty principle:
+\begin{equation}
+    \Delta x \cdot \Delta p \geq \frac{\hbar}{2}\quad \text{or}\quad \Delta E \cdot \Delta t \geq \hbar
+\end{equation}
+
+\subsection{Potenial Well}
