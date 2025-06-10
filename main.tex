@@ -3,7 +3,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel,varioref}
 \usepackage[left=0.7cm,right=0.7cm,top=0.7cm,bottom=0.7cm,includeheadfoot]{geometry}
-
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -13,7 +15,7 @@
 \usepackage{transparent}
 \usepackage{cleveref}
 
-
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
 \begin{document}
     \input{Sections/Header}
