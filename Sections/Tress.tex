@@ -286,6 +286,11 @@ The higher the temperature the more electrons overcome the band gap.
     \includegraphics[width=\columnwidth]{images/bandmodel2.png}
     \label{fig:bandmodel2}
 \end{figure}
+
+\textbf{n-doping:} Additional electron added by donors(e.g. P in Si) goes in conduction band, More electrons \(\rightarrow\) Fermi level shifts to CB
+
+\textbf{p-doping:} Missing electron acceptors(e.g. B in Si) creates hole, More holes \(\rightarrow\) Fermi level shifts to VB
+
 \section{Absorption and emission}
 \textbf{Black Body:}
 \begin{itemize}
@@ -296,4 +301,66 @@ The higher the temperature the more electrons overcome the band gap.
     \subitem Planck's law 
 \end{itemize}
 
-%Lecture 11
+
+ \subsection{Conductivity}
+ Electrical resistance:
+ \[
+ R = \frac{U}{I}= \rho\frac{l}{A} = \frac{1}{\sigma}\frac{l}{A}
+ \]
+ \(\rho\): Resistivity, Ohm com
+ 
+ \(\sigma\): Conductivity, Siemens/cm
+ \[
+ I = e \cdot n \cdot v \cdot A
+ \]
+ \(e\): elementary charge
+
+ \(n\): electron density in \(\text{cm}^3\),\(v\) velocity
+\[
+\text{Mobility}\, \mu = -\frac{v}{E}
+\]
+\[
+\sigma = e \cdot n \cdot \mu
+\]
+In a semiconductor, we have holes with concentration \(p\) as well, thus:
+\[
+\sigma = e \cdot (n\cdot \mu_n + p \cdot \mu_p)
+\]
+\[
+\mu = \frac{e}{m^*} \cdot \tau
+\]
+\(\tau\): time between scattering events
+
+\(m^*\): effective electron mass
+
+
+\section{Photonic Crystals}
+Photonic band-gap (PBG) materials or photonic crystals (PC) are materials
+with a periodic dielectric profile,
+which can prevent light of certain frequencies or wavelengths
+from propagating in one, two or any number of polarisation directions
+within the materials.
+This range of frequencies is analogous to an electronic band-gap.
+Thus, it is often called a photonic band-gap.
+
+Some wavelengths cant propagate though crystals: \(\lambda\approx 2 a\)
+
+\begin{itemize}
+    \item Electrons are waves (quantum mechanics)
+    \item Waves in a periodic medium can propagate without scatterning: Bloch's Theorem
+    \item The foundations do not depend on the specific wave equation.(Hold for magnetic waves as well)
+\end{itemize}
+
+\subsection{Periodic Hermitian Eigen-problems in 1D}
+\begin{itemize}
+    \item Start with a uniform(1D) medium
+    \item Treat it as \textit{artificially} periodic
+    \item Bands are folded by \(2\pi/a\) equivalence
+    \item Add a small real preiodicity \(\epsilon_2 = \epsilon_1 + \Delta\epsilon\)
+    \item Splitting of degeneracy: state concentrated in higher index \(\epsilon_2\) has lower frequency \(\omega\)\((\omega = \frac{c}{\sqrt{\epsilon_1}}k = \frac{c}{n}k)\)
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{images/eigenproblem.png}
+    \label{fig:eigenmodel}
+\end{figure}
