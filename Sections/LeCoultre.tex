@@ -222,3 +222,82 @@ The \textbf{intrinsic hardness }related to:
     \item high number of valence electrons per atom
     \item high number of bonds per unit volume
 \end{itemize}
+
+\section{Optical coatings}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{images/fresnel.png}
+    \label{fig:fresnel}
+\end{figure}
+Fresnel refraction:
+\[
+n_1 \sin(\alpha) = n_2 \sin(\beta)
+\]
+Reflected power/Incident power:
+\[
+R = \left(\frac{n_2-n_1}{n_1 + n_2}\right)^2
+\]
+Transmitted power/Incident power:
+\[
+T = \frac{4n_1n_2}{\left(n_1+n_2\right)^2}
+\]
+with \(R + T = 1\)
+
+\subsection{Interference}
+\textbf{Constructive Interference:} Superposition of two waves which are in phase
+
+\textbf{Destructive Interference:} Superposition of two waves with a phase shift of \(\pi\)
+
+Thin film interference \(n_1 = 1 \text{ Air} < n_2, n_3\)
+
+Case 1:\(n_2 < n_3\)
+\begin{itemize}
+    \item Phase jumps of \(\pi\) for both waves
+    \item Destructive interference for \(d \cdot n_2 = \lambda_0/4\)
+\end{itemize}
+Case 2:\(n_2 > n_3\)
+\begin{itemize}
+    \item Phase jump upper interface, no phase jumps at lower interface
+    \item Constructive interference for \(d\cdot n_2 = \lambda_0/4\)
+\end{itemize}
+
+\section{Ineraction of light with nano and microparticels}
+\textbf{Dielectric}
+\begin{itemize}
+    \item Bound electrons \(\rightarrow\) Lorentz Model for dielectric function
+    \item Spring effect between electron-ion
+    \item Dampening due to collisions
+    \item Electric field
+\end{itemize}
+
+Lorentz dielectric function:
+\[
+\epsilon(\omega) = 1 + \frac{\omega^2_p}{(\omega_0^2-\omega^2)+i\gamma \omega}
+\]
+\textbf{Metal}
+\begin{itemize}
+    \item Free electrons \(\rightarrow\) Drude Model for dielectric function
+    \item Spring effect between electron-ion
+    \item Dampening due to collisions
+    \item Electric field
+\end{itemize}
+
+Drude dielectric function:
+\[
+\epsilon(\omega) = 1 + \frac{\omega^2_p}{i\gamma \omega-\omega^2}
+\]
+with \(\omega^2_p = \frac{Nq^2}{m_e\epsilon_0}\),\(\gamma = \frac{1}{\tau}\) and \(\tau = \text{time between collisions}\)
+
+\subsection{Scattering}
+ \textbf{Rayleigh Scattering (elastic):}
+ \begin{itemize}
+    \item Interaction between light (photon) and air (\(\text{N}_2\) symmetrical molecule)\(\lambda \ll d\)
+    \item Elastic coupling varying E field and dipole
+    \item (\(\Theta\) parameter): Scattering at right angles is half the forward/backward intensity
+ \end{itemize}
+ \textbf{Mie Scattering:}
+ \begin{itemize}
+    \item For \(\lambda/10 < r < \lambda\)
+    \item n case of visible light 400-780nm, particles between 50-500 nm
+    \item Amount of scattered light \(\text{Q} \approx \text{extinction coefficient}\approx c+\cos(r/\lambda)e^{-kr/\lambda}\)
+ \end{itemize}
