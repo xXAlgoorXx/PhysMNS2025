@@ -20,7 +20,12 @@ E_s = \gamma \cdot A
 \(\gamma\): specific surface energy/surface tension \(\text{J/m}^2\) or \(\text{N/m}^2\) 
 
 The surface tension tries to keep the surface of a fluid as small as possibel \(\rightarrow\) Drops of liquid are spherical.
-
+\[
+V(r) = -\frac{A}{r} +B \cdot r^{-n}
+\]
+\[
+K_s = \frac{d^2V}{dr^2} \qquad \frac{K_s}{a_a} \sim \frac{1}{a_0^{-4}}
+\]%Todo Checken 
 \section{Condensed matter}
 Type of bonds:
 \begin{itemize}
@@ -33,7 +38,7 @@ Type of bonds:
 \subsection{Surface of solid}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\columnwidth]{images/surface.png}
+    \includegraphics[width=0.7\columnwidth]{images/surface.png}
     \label{fig:surface}
 \end{figure}
 \begin{itemize}
@@ -50,9 +55,13 @@ Type of bonds:
     \label{fig:atombond}
 \end{figure}
 \subsubsection{Adsorption on solid surface}
+Rate at which physisorption molecules become chemisorbed:
+\[
+k = v_0 \exp\left(-\frac{E_a}{kT}\right)
+\]
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\columnwidth]{images/surfacedistance.png}
+    \includegraphics[width=0.7\columnwidth]{images/surfacedistance.png}
     \label{fig:surfdist}
 \end{figure}
 \textbf{Surface adsorption: }Impinging atoms and molecules enter and interact within the transition region between gas phase \& Surface
@@ -71,6 +80,16 @@ Two kinds:
 \end{figure}
 Film forming atoms or molecules in the vapor phase impinge on the substrate creating nuclei of mean dimension \(r\)
 
+Spherical cap:
+\[
+a_1 = 2\Pi\left[1 -  \cos(\theta)\right]
+\]
+\[
+a_2 = \Pi\cdot\sin^2(\theta)
+\]
+\[
+a_3 = \frac{\Pi}{3}\left[2 - 3\cos(\theta) + \cos^3(\theta)\right]
+\]
 Free-energy change:
 \[
 \Delta G = a_3 r^3 \Delta G_v + a_1 r^2 \gamma_{fv} + a_2 r^2 \gamma_{fs} - a_2 r^2 \gamma_{sv}
@@ -139,9 +158,14 @@ With Youngs equation get linear equation \(y = mx + c\):
 
 \(L\): Liquid
 
+\[
+\sigma_{tot} = \frac{d_{21}\sigma_{21} + d_{22}\sigma_{22}}{d_{tot}} \quad \sigma = -\left(\frac{E}{1-V}\right)\left(\alpha_f- \alpha_s\right)\Delta T
+\]
 \section{Stress in thin film}
+\
+
 Film exerts bending moment on substrate plate which leads to curvature \((K = 1/R)\)
-\begin{figure}[h]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=\columnwidth]{images/stoney.png}
     \label{fig:stoney}
@@ -244,6 +268,13 @@ T = \frac{4n_1n_2}{\left(n_1+n_2\right)^2}
 with \(R + T = 1\)
 
 \subsection{Interference}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{images/ThimFilmInterference.png}
+    \label{fig:fresnel}
+\end{figure}
+\(n_2 = \sqrt{n_1 \cdot n_3}\) for diminating reflection (Equal amplitude reflection \(\psi_1 = \psi_2\))
+
 \textbf{Constructive Interference:} Superposition of two waves which are in phase
 
 \textbf{Destructive Interference:} Superposition of two waves with a phase shift of \(\pi\)
@@ -288,6 +319,25 @@ Drude dielectric function:
 \]
 with \(\omega^2_p = \frac{Nq^2}{m_e\epsilon_0}\),\(\gamma = \frac{1}{\tau}\) and \(\tau = \text{time between collisions}\)
 
+\[
+R = \frac{\left(n-1\right)^2 + k^2}{\left(n+1\right)^2 + k^2}
+\]
+\[
+E(x,t) = E_0 e^{i\left(kx - \omega t\right)}
+\]
+\[
+k = \frac{2\pi}{\lambda} = \frac{\omega}{c} = \frac{n\omega}{c}
+\]
+If ignore dampening: \(\rightarrow \epsilon(\omega) = 1 + \frac{\omega^2_p}{\omega}\)
+\[
+N(\omega) = \sqrt{\epsilon(\omega)} = \sqrt{1 + \frac{\omega^2_p}{\omega}}
+\]
+\[
+\omega < \omega_p \rightarrow n=0,\,k\neq0 \rightarrow R = 1
+\]
+\[
+\omega > \omega_p \rightarrow n=1,\,k\neq0 \rightarrow R = 0
+\]
 \subsection{Scattering}
  \textbf{Rayleigh Scattering (elastic):}
  \begin{itemize}

@@ -13,7 +13,12 @@
     \item $\psi(x)$ -- wave function (probability amplitude)
     \item $|\psi(x)|^2$ -- probability density at position $x$
     \item \(eV\) -- electronvolt, a unit of energy, \(1\,eV = 1.602 \times 10^{-19}\,\mathrm{J}\)
+    \item \(m_{\text{proton}}\) -- mass of the proton, \(m_{\text{proton}} = 1.673 \times 10^{-27}\,\mathrm{kg}\)
+    \item \(m_{\text{electron}}\) -- mass of the electron, \(m_{\text{electron}} = 9.109 \times 10^{-31}\,\mathrm{kg}\)
 \end{itemize}
+\[
+E = \frac{1}{2} m v^2 = \frac{p^2}{2m}
+\]
 \begin{equation*}
     p = m \cdot v
 \end{equation*}
@@ -25,6 +30,39 @@ De Broglie wavelength:
 \begin{equation*}
     \lambda = \frac{h}{p} = \frac{h}{m \cdot v}
 \end{equation*}
+Diffraction (Single/Double slit):
+
+\textbf{Single slit:} The minima (dark fringes) occur at
+\[
+a \sin(\theta) = m \lambda, \quad m = \pm 1, \pm 2, \ldots
+\]
+where \(a\) is the slit width.
+
+\textbf{Double slit:} The maxima (bright fringes) occur at
+\[
+d \sin(\theta) = n \lambda, \quad n = 0, \pm 1, \pm 2, \ldots
+\]
+where \(d\) is the distance between the slits.
+
+For small angles (\(\theta \ll 1\)), \(\sin(\theta) \approx \theta \approx \tan(\theta)\), so the position of the \(n\)-th maximum on a screen at distance \(L\) is
+\[
+y_n = L \tan(\theta_n) \approx L \theta_n \approx L \frac{n \lambda}{d}
+\]
+
+\textbf{Rayleigh criterion (for circular Slit):}
+\[
+\sin(\theta) = 1.22\, \frac{\lambda}{D}
+\]
+where \(D\) is the diameter of the aperture.
+
+\(L\): distance to the screen, \(d\): slit separation, \(a\): slit width, \(y_n\): position of the \(n\)-th maximum.
+\subsection{Laser}
+\(\Delta f\) = spectral bandwidth
+
+\[
+\Delta \lambda = \frac{\lambda^2}{c} \Delta f
+\]
+Full width at half maximum (FWHM):\(\Delta \tau \cdot \Delta f \approx 0.44\)
 \subsection{Schrödinger equation}
 The time-independent Schrödinger equation:
 \begin{equation*}
@@ -60,11 +98,11 @@ which is a real exponential decay.
 
 Heisenberg's uncertainty principle:
 \begin{equation*}
-    \Delta x \cdot \Delta p \geq \frac{\hbar}{2}\quad \text{or}\quad \Delta E \cdot \Delta t \geq \hbar
+    \Delta x \cdot \Delta p \geq \hbar\quad \text{or}\quad \Delta E \cdot \Delta t \geq \hbar
 \end{equation*}
 
 \subsection{Wave Packet}
-Gaussian superposition of different wace functions concentrated around a certain point \(k_0 \Rightarrow\) Gaussian envelope on space.
+Gaussian superposition of different wave functions concentrated around a certain point \(k_0 \Rightarrow\) Gaussian envelope on space.
 Single wave moves at phase velocity:
 \begin{equation*}
     v_{phase} = \frac{\lambda}{T} = f \cdot \lambda = \frac{E}{p} = \frac{\hbar k}{m}
@@ -128,6 +166,9 @@ Exponential drop to the left and right. On the walls, both the wave function and
 \end{equation*}
 
 \textbf{If \(E > U_0\) the solution in the areas \rom{1} and \rom{3} is also a harmonic wave:}
+\[
+E - U_0 = \frac{p^2}{2m} = \frac{h^2}{2m\lambda}
+\]
 \begin{equation*}
     \psi(x) = A\cdot \sin(k\cdot x-\varphi)\quad\text{with:}\quad k= \frac{2\pi}{\lambda} = \sqrt{\frac{2\cdot m}{\hbar^2}\cdot(E-U_0)}
 \end{equation*}
@@ -151,7 +192,7 @@ We find the wave numbers
     \includegraphics[width=0.4\columnwidth]{images/tunnel.png}
     \label{fig:tunnel}
 \end{figure}
-Exponential decrease with barrier with.
+Exponential decrease with barrier with. \textbf{Probability of tunneling:}
 \begin{equation*}
     T \approx e^{-2\cdot b\cdot L} \quad\text{with:}\quad b = \sqrt{\frac{2\cdot m}{\hbar^2}\cdot (U_0 - E)}
 \end{equation*}
@@ -184,6 +225,9 @@ For hydrogen atom, the potential (potential energy) is given by the spherically 
 \end{equation*}
 with \(n = 1,2,3,\dots\).
 Here \(n\) is the principal quantum number and defines the energy \(E_n\) belonging to the wave function \(\psi_{n.l,m}(r,\theta,\varphi)\)
+\[
+\psi_{1,0,0}(r,\theta,\varphi) = \frac{1}{\sqrt{\pi r_0^3}}\cdot e^{-\frac{r}{r_0}}
+\]
 \subsection{Quantum numbers}
 \begin{itemize}
     \item \(n\) -- Principal quantum number (shell)
