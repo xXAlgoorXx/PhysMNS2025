@@ -14,14 +14,17 @@
 \usepackage{enumitem}
 \usepackage{transparent}
 \usepackage{cleveref}
-
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 \newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
 \begin{document}
+\lhead{\textbf{PhyNMS} \\ \textit{Lukas Schöpf}}
+\rhead{\date{\today}}
     \input{Sections/Header}
 	\maketitle
 	\setlength\parindent{0pt}
-
+	\setcounter{page}{1}
 	% Uncomment these lines if you want to include the respective sections
 	\input{Sections/Tress.tex}
 	\input{Sections/LeCoultre.tex}

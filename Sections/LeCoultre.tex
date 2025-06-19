@@ -5,7 +5,7 @@ Metal organic framework(MOF): porus materials. Able to store substance (e.g. Wat
 
 Void volume (porosity) is defined as
 \[
-\epsilon = \frac{V_pores}{V_materials}
+\epsilon = \frac{V_{pores}}{V_{materials}}
 \]
 \begin{itemize}
     \item Micropores (<2nm)
@@ -36,11 +36,11 @@ Type of bonds:
 \textbf{Van der Waals force:} weak dipole dipole charge interaction between molecules(e.g. water, polymers, proteins).
 
 \subsection{Surface of solid}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\columnwidth]{images/surface.png}
-    \label{fig:surface}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\columnwidth]{images/surface.png}
+%     \label{fig:surface}
+% \end{figure}
 \begin{itemize}
     \item Surface represent typcalliy \(15\)\r{A}
     \item At the surface, positiv periodic potential due to ions cores terminates
@@ -51,14 +51,17 @@ Type of bonds:
 \end{itemize}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\columnwidth]{images/atombond.png}
+    \includegraphics[width=0.7\columnwidth]{images/atombond.png}
     \label{fig:atombond}
 \end{figure}
+\textbf{Surface energy:} Difference between Total energy (Bulk Atoms) and Total energy (Surface Atoms)
 \subsubsection{Adsorption on solid surface}
 Rate at which physisorption molecules become chemisorbed:
 \[
-k = v_0 \exp\left(-\frac{E_a}{kT}\right)
+k = v_0 e^{\left(-\frac{E_a}{kT}\right)}
 \]
+\(E_a\): Energy barrier for chemisorption
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\columnwidth]{images/surfacedistance.png}
@@ -82,13 +85,13 @@ Film forming atoms or molecules in the vapor phase impinge on the substrate crea
 
 Spherical cap:
 \[
-a_1 = 2\Pi\left[1 -  \cos(\theta)\right]
+a_1 = 2\pi\left[1 -  \cos(\theta)\right]
 \]
 \[
-a_2 = \Pi\cdot\sin^2(\theta)
+a_2 = \pi\cdot\sin^2(\theta)
 \]
 \[
-a_3 = \frac{\Pi}{3}\left[2 - 3\cos(\theta) + \cos^3(\theta)\right]
+a_3 = \frac{\pi}{3}\left[2 - 3\cos(\theta) + \cos^3(\theta)\right]
 \]
 Free-energy change:
 \[
@@ -103,17 +106,24 @@ Critical nucleus size \(r = r^*\):
 r^* = \frac{-2(a_1 \gamma_{fv}+a_2 \gamma_{fs} - a_2 \gamma_{sv})}{3 a_3 \Delta G_v}
 \]
 \subsection{Film growth modes}
+Youngs equation:
+
+\[
+\cos \theta = \frac{\gamma_{sv} - \gamma_{fc}}{\gamma_{fv}}
+\]
+
 Island growth:
-\[
+\(
  \gamma_{sv} < \gamma_{fs} + \gamma_{fv}
-\]
+\)
+
 Layer growth:
-\[
+\(
 \gamma_{sv} \ge \gamma_{fs} + \gamma_{fv}
-\]
+\)
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\columnwidth]{images/layergrowth.png}
+    \includegraphics[width=0.8\columnwidth]{images/layergrowth.png}
     \label{fig:layergrowth}
 \end{figure}
 \begin{figure}[!ht]
@@ -152,19 +162,10 @@ With Youngs equation get linear equation \(y = mx + c\):
 \]
 \(\sigma\) sometimes given as \(\gamma\)
 
-\(S\): Solid
-
-\(V\): Vapor
-
-\(L\): Liquid
-
-\[
-\sigma_{tot} = \frac{d_{21}\sigma_{21} + d_{22}\sigma_{22}}{d_{tot}} \quad \sigma = -\left(\frac{E}{1-V}\right)\left(\alpha_f- \alpha_s\right)\Delta T
-\]
+\(S\): Solid, \(V\): Vapor, \(L\): Liquid
 \section{Stress in thin film}
-\
 
-Film exerts bending moment on substrate plate which leads to curvature \((K = 1/R)\)
+Film exerts bending moment on substrate plate which leads to curvature \(r = 1 / \kappa\)
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\columnwidth]{images/stoney.png}
@@ -173,9 +174,9 @@ Film exerts bending moment on substrate plate which leads to curvature \((K = 1/
 
 \textbf{Stoney equation:}
 \[
-\sigma_f = \left(\frac{E_s}{1-v_s}\right)\frac{t^2_s}{6 t_f}\Delta \kappa
+\sigma_f = \left(\frac{E_s}{1-\nu_s}\right)\frac{t^2_s}{6 t_f}\Delta \kappa
 \]
-Term \(\left(\frac{E_s}{1-v_s}\right)\) is called biaxial elastic modulus.
+Term \(\left(\frac{E_s}{1-\nu_s}\right)\) is called biaxial elastic modulus.
 
 \(\kappa\): Curvature
 
@@ -201,9 +202,22 @@ Stress types:
     \includegraphics[width=\columnwidth]{images/insitu.png}
     \label{fig:insitu}
 \end{figure}
-
+\[
+\sigma_{tot} = \frac{d_{21}\sigma_{21} + d_{22}\sigma_{22}}{d_{tot}}
+\]
 \textbf{The stress dilemma:} intrinsic stress relaxes at high deposition T, thermal increases
+\subsubsection{Thermal stress}
+\[
+\sigma_{thermal} = - \left( \frac{E}{1 - \nu} \right)_f (\alpha_f - \alpha_s) \Delta T
+\]
+\(E\): Youngs modulus, \(\alpha\): Thermal expansion coefficient
 
+\subsubsection{Industrial Problems}
+\begin{itemize}
+    \item interfacial cracks
+    \item film delamination 
+    \item morphology evolution during film growth 
+\end{itemize}
 \subsection{Adhesion of thin films}
 
 Stress intensity at crack tip:
@@ -273,7 +287,13 @@ with \(R + T = 1\)
     \includegraphics[width=0.7\columnwidth]{images/ThimFilmInterference.png}
     \label{fig:fresnel}
 \end{figure}
-\(n_2 = \sqrt{n_1 \cdot n_3}\) for diminating reflection (Equal amplitude reflection \(\psi_1 = \psi_2\))
+
+\[
+r_{12} = \frac{n_1 - n_2}{n_1 + n_2} = \frac{\Psi_1}{\Psi_0} \quad ; \quad
+r_{23} = \frac{n_2 - n_3}{n_2 + n_3} = \frac{\Psi_2}{\Psi_0}
+\]
+
+\(n_2 = \sqrt{n_1 \cdot n_3}\) for destructive reflection (Equal amplitude reflection \(\psi_1 = \psi_2\))
 
 \textbf{Constructive Interference:} Superposition of two waves which are in phase
 
@@ -339,6 +359,15 @@ N(\omega) = \sqrt{\epsilon(\omega)} = \sqrt{1 + \frac{\omega^2_p}{\omega}}
 \omega > \omega_p \rightarrow n=1,\,k\neq0 \rightarrow R = 0
 \]
 \subsection{Scattering}
+\[
+x = \frac{2\pi r}{\lambda}
+\quad
+\begin{cases}
+x \ll 1 & \text{: Rayleigh scattering} \\
+x \sim 1 & \text{: Mie scattering} \\
+x \gg 1 & \text{: Geometric scattering}
+\end{cases}
+\]
  \textbf{Rayleigh Scattering (elastic):}
  \begin{itemize}
     \item Interaction between light (photon) and air (\(\text{N}_2\) symmetrical molecule)\(\lambda \ll d\)

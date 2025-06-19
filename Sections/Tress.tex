@@ -17,7 +17,7 @@
     \item \(m_{\text{electron}}\) -- mass of the electron, \(m_{\text{electron}} = 9.109 \times 10^{-31}\,\mathrm{kg}\)
 \end{itemize}
 \[
-E = \frac{1}{2} m v^2 = \frac{p^2}{2m}
+E = \frac{1}{2} m v^2 = \frac{p^2}{2m} = \frac{\hbar^2k^2}{2\,m}
 \]
 \begin{equation*}
     p = m \cdot v
@@ -71,7 +71,7 @@ The time-independent Schrödinger equation:
 \end{equation*}
 
 \(\psi(x)\) is a probabilty amplitude which doesnt say much itself. Only \(|\psi(x)|^2\) which is a probabilty density.
-\cref{eq:time-independent-schroedinger} can be transformed to 
+Can be transformed to 
 \begin{equation*}
     \frac{d^2}{dx^2} \psi(x) - b^2 \cdot \psi(x) = 0
 \end{equation*}
@@ -180,7 +180,7 @@ A part of the incident wave is reflected or transmitted at each transition. We k
 \end{equation*}
 So there is a certain probability that a particel will be reflected
 \begin{equation*}
-    R = \frac{(k_1 -k_2)^2}{(k_1 + k_2)^2}
+    R = \frac{(k_1 - k_2)^2}{(k_1 + k_2)^2}
 \end{equation*}
 We find the wave numbers
 \begin{equation*}
@@ -280,7 +280,7 @@ Density of state \(g(E)\):
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\columnwidth]{images/metals.png}
-    \caption{Vertical black line: Fermi-Level}
+    \caption{Vertical black line: Fermi-Level, kT: Thermal energy}
     \label{fig:metals}
 \end{figure}
 Energy at Fermi level is called Fermi energy.
@@ -395,16 +395,23 @@ Some wavelengths cant propagate though crystals: \(\lambda\approx 2 a\)
     \item The foundations do not depend on the specific wave equation.(Hold for magnetic waves as well)
 \end{itemize}
 
-\subsection{Periodic Hermitian Eigen-problems in 1D}
-\begin{itemize}
-    \item Start with a uniform(1D) medium
-    \item Treat it as \textit{artificially} periodic
-    \item Bands are folded by \(2\pi/a\) equivalence
-    \item Add a small real preiodicity \(\epsilon_2 = \epsilon_1 + \Delta\epsilon\)
-    \item Splitting of degeneracy: state concentrated in higher index \(\epsilon_2\) has lower frequency \(\omega\)\((\omega = \frac{c}{\sqrt{\epsilon_1}}k = \frac{c}{n}k)\)
-\end{itemize}
-\begin{figure}[h]
+% \subsection{Periodic Hermitian Eigen-problems in 1D}
+% \begin{itemize}
+%     \item Start with a uniform(1D) medium
+%     \item Treat it as \textit{artificially} periodic
+%     \item Bands are folded by \(2\pi/a\) equivalence
+%     \item Add a small real preiodicity \(\epsilon_2 = \epsilon_1 + \Delta\epsilon\)
+%     \item Splitting of degeneracy: state concentrated in higher index \(\epsilon_2\) has lower frequency \(\omega\)\((\omega = \frac{c}{\sqrt{\epsilon_1}}k = \frac{c}{n}k)\)
+% \end{itemize}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\columnwidth]{images/eigenproblem.png}
+%     \label{fig:eigenmodel}
+% \end{figure}
+
+\textbf{Superlensing}: Technique that uses negative-index metamaterials to image objects beyond the diffraction limit by amplifying evanescent waves.
+\begin{figure}[!ht]
     \centering
-    \includegraphics[width=\columnwidth]{images/eigenproblem.png}
-    \label{fig:eigenmodel}
+    \includegraphics[width=0.7\columnwidth]{images/bandDiagramm.png}
+    \label{fig:superlensing}
 \end{figure}
